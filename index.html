@@ -80,76 +80,63 @@
         </div>
         <div id="order">
             <h2>Order Now</h2>
-            <div id="form">
-                <div class="row">
-                    <div class="col-md-3">
-                        <label>Size</label>
-                        <select class="browser-default custom-select" id="sizes">
-                            <option value="0">Choose option</option>
-                            <option value="1500">Large =ksh 1500</option>
-                            <option value="1500">Large =ksh 1000</option>
-                            <option value="1500">Large =ksh 500</option>
+            <div class="form text center">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8 order-overlay text-center">
+                    <form id="pizza" class="col-sm-6 offset-sm-3 text-center">
+                        <label for="flavours">Pick your pizza Flavour:</label>
+                        <select id="flavours" class="custom-select custom-select-md mb-3 flavour" required>
+                            <option value="300">Veg Tikka</option>
+                            <option value="400">Chicken Tikka</option>
+                            <option value="250">Peri-Peri Chicken</option>
+                            <option value="500">BBQ Steak</option>
+                            <option value="300">Boerewors</option>
+                            <option value="350">Hawaiian</option>
+                            <option value="400">Chicken and Mushroom</option>
                         </select>
-                    </div>
-                    <div class="col-md-3">
-                        <label>crust</label>
-                        <select class="browser-default custom-select" id="crusts">
-                            <option value="">Choose option</option>
-                            <option value="1500">Crispy =ksh 1500</option>
-                            <option value="1000">Stuffed =ksh 1000</option>
-                            <option value="500">Gluten free= ksh 500</option>
+                        <label for="sizes">Chose your preferred Size:</label>
+                        <select id="sizes" class="custom-select custom-select-md mb-3" required>
+                            <option value="400">Regular</option>
+                            <option value="800">Medium</option>
+                            <option value="1200">Large</option>
                         </select>
-                    </div>
-                    <div class="col-md-3">
-                        <label>Toppings</label>
-                        <select class="browser-default custom-select" id="toppings">
-                            <option value="">Choose option</option>
-                            <option value="1500">Mushroom =ksh 1500</option>
-                            <option value="1000">Macon =ksh 1000</option>
-                            <option value="1000">Sandwich beef= ksh1200</option>
-                            <option value="1000">Mince= ksh 1000</option>
-                            <option value="1000">Pineapple= ksh 1000</option>   
+                        <label for="crusts">Choose your favorite Crust:</label>
+                        <select id="crusts" class="custom-select custom-select-md mb-3" required>
+                            <option value="100">Thin Crust @ Ksh. 100</option>
+                            <option value="150">Thick Crust @ Ksh. 150</option>
+                            <option value="180">FlatBread Crust @ sh. 180</option>
+                            <option value="280">Custom Crust @ sh. 280</option>
                         </select>
-                    </div>
-                    <div class="col-md-3">
-                        <label>Quantity</label>
-                        <input class="form-control" type="text" name="pizza" id="quantity" placeholder="0" max="" min="0">
-                    </div>
-                </div> 
-                <br>
-                <br>
-                <br>
-                <p class="alert alert-primary text-center" id="para"></p>
-                <table class="table" id="table">
-                    <thead>
-                        <tr>
-                            <th scope="row">Quantity</th>
-                            <th scope="row">Size</th>
-                            <th scope="row">Toppings</th>
-                            <th scope="row">Crust</th>
-                        </tr>
-                    </thead>
-                    <tfoot>
-                        <th Crust>Totals</th>
-                    </tfoot>
-                </table>
-                <div class="d-flex justify-content-center my-4">
-                    <input type="checkbox" id="delivery">
-                    <label>
-                        Do you want it to be delivered?
-                    </label>
-                    <input type="text" id="location" placeholder="enter location...">
-                </div>
-                <br>
-                <br>
-                <div class="row" id="btns">
-                    <buttons class="btn btn-warning md-auto d-block checkbox" type="button" id="checkout"><strong>Checkout</strong></buttons>
-                </div>
-                <div class="col-md-1">
-                    <button class="btn btn-warning md-auto d-block add" type="button" id="add"><strong>Add</strong></button>
+                        <label for="toppings">Select Your favourite Toppings</label>
+                        <select id="toppings" class="custom-select custom-select-md mb-3" required>
+                            <option value="80">Tomato @ sh. 80</option>
+                            <option value="80">Onions @ sh. 80</option>
+                            <option value="80">Mushroom @ sh. 80</option>
+                            <option value="120">Olives @ sh. 120</option>
+                            <option value="120">Pineapple @ sh. 120</option>
+                            <option value="170">Beef Peperoni @ sh. 170</option>
+                            <option value="170">Periperi Chicken @ sh. 170</option>
+                        </select>
+                        <label for="number">Number of Pizza's</label>
+                        <input type="number" class="form-control" id="number" placeholder="Number of pizzas" min="1"
+                            max="10" required>
+                        <button type="submit" class="btn btn-danger checkout" id="checkout">Checkout</button>
+                    </form>
+
                 </div>
             </div>
-        </div>
+
+            <div class="order-summary" id="sum-order">
+                <h1 class="text-center" id="summary">Order Summary</h1>
+                <h2 class="text-center summary">Your order is as follows:</h2>
+                <ul id="list" class="text-center sum">
+                </ul>
+            </div>
+            <div class="d-block mx-auto text-center">
+                <button class='deliver'>Make Delivery</button>
+                <button class='delivernot'>Pick Up</button>
+            </div>
+        </div> 
         <div id="mymouse">
             <h2>Contact us:</h2>
             <p class="text-center"><a href="#"> +254701853079</a></p>
@@ -160,6 +147,8 @@
         </div>
 
     </div>
-    <script src="/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 </html>
