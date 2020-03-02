@@ -22,6 +22,7 @@ The user reloads the page,then click on the order a the navigation bar,where it 
 * JQUERY
 
 ## Live Link
+https://saintiemonte10.github.io/Pizza-Paradise/
 
 ## Contact Information
 Email: claremonte53@gmail.com
