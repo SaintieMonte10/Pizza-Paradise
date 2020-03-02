@@ -58,3 +58,16 @@ h2{
 .me:hover{
     color:deepskyblue;
 }
+
+.myself{
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 25px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 360px; 
+}
+
+.myself{
+    color: deepskyblue;
+}
