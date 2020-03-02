@@ -2,6 +2,7 @@ body{
     font-size: xx-large;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 #pizza{
@@ -87,7 +88,7 @@ h2{
 
 #order{
     background-color: green;
-    background-color: cover;
+    background-size: cover;
 }
 
 #btns{
