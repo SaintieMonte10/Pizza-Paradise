@@ -155,3 +155,7 @@ h2{
     padding: 30px;
     margin-top: 10px;
 }
+
+html{
+    scroll-behavior: smooth;
+}
