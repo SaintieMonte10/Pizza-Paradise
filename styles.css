@@ -35,3 +35,9 @@ body{
 p{
     font-family: 'Nanum Brush Script', serif;
 }
+
+h2{
+    text-align: center;
+    color:white ;
+    font-family: 'Nosifer',serif ;
+}
