@@ -89,3 +89,29 @@ h2{
     background-color: green;
     background-color: cover;
 }
+
+#btns{
+    text-align: center;
+}
+
+#navbar{
+  overflow: hidden;
+  width: 100%;
+  padding: 5px;
+  position: fixed;
+}
+
+.navbar a{
+    float: left;
+    display: flex;
+    color: white;
+    text-align: center;
+    padding: 18px 18px;
+    text-decoration: none;
+    font-size: 17px;
+    flex-direction: row;
+}
+
+.navbar a:hover{
+    background-color: green;
+}
