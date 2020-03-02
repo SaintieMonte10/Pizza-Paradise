@@ -115,3 +115,10 @@ h2{
 .navbar a:hover{
     background-color: green;
 }
+
+.mouse{
+    animation: pulse 5s infinite;
+    padding-top: 2vh;
+    animation-duration: 2s;
+    animation-name: mymouse;
+}
