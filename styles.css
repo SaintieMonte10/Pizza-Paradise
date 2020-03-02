@@ -141,6 +141,12 @@ h2{
       }
 }
 
+#mymouse{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
 #contact{
     background-color: black;
     background-size: cover;
